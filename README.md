@@ -1,1 +1,6 @@
-# dip-kropotkinn
+# dip-kropotkinn[data.js](https://github.com/user-attachments/files/30121260/data.js)
+[index.html](https://github.com/user-attachments/files/30121261/index.html)[vercel.json](https://github.com/user-attachments/files/30121268/vercel.json)
+[style.css](https://github.com/user-attachments/files/30121267/style.css)
+[sitemap.xml](https://github.com/user-attachments/files/30121266/sitemap.xml)
+[script.js](https://github.com/user-attachments/files/30121265/script.js)
+[robots.txt](https://github.com/user-attachments/files/30121263/robots.txt)
