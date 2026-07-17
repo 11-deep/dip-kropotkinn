@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>ДИП | Атмосферная кальянная в Кропоткине на Красной улице, 168/1</title>
+    <meta name="description" content="ДИП — атмосферная кальянная в Кропоткине на Красной улице, 168/1. Ароматные миксы, чай, уют. Бронируйте стол онлайн. Лучшие кальяны в Кропоткине.">
+    <meta name="keywords" content="ДИП, Кропоткин, Красная улица, бронирование, чай, меню, кальянная, кальяны Кропоткин, лучшая кальянная Кропоткин">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain-overlay"></div>
+<div class="toast-message" id="toastMsg">✨</div>
+<div class="security-note" id="securityNote">🔒 HTTPS: </div>
+<div class="settings-icon" id="settingsIcon">⚙️ Настройки 18+</div>
+
+<!-- Модальное окно 18+ -->
+<div id="ageModal" class="modal">
+    <div class="modal-content">
+        <h3>ДИП</h3>
+        <p>❗ Вам есть 18 лет?<br>Наш сайт и заведение предназначены только для совершеннолетних гостей.</p>
+        <div class="age-buttons">
+            <button id="ageYesBtn" class="age-btn yes">Да, мне есть 18</button>
+            <button id="ageNoBtn" class="age-btn no">Нет, мне меньше 18</button>
+        </div>
+        <div class="checkbox-settings">
+            <label>
+                <input type="checkbox" id="dontAskAgainCheckbox"> 
+                Запомнить и больше не спрашивать
+            </label>
+        </div>
+        <div style="margin-top: 0.8rem; font-size: 0.7rem; color: #7C828A;">
+            Если снимете галочку — при следующем входе проверка появится снова
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно деталей меню -->
+<div id="menuDetailModal" class="menu-detail-modal">
+    <div class="menu-detail-content">
+        <span class="menu-detail-close" id="menuDetailClose">&times;</span>
+        <h3 id="modalItemName">Название</h3>
+        <div class="detail-price" id="modalItemPrice">0₽</div>
+        <div class="detail-composition"><strong>📋 Состав:</strong><br><span id="modalItemComposition">-</span></div>
+        <div id="modalItemDesc" style="color: #7C828A; margin-top: 0.5rem;"></div>
+        <button class="btn-outline" style="margin-top: 1rem;" onclick="closeMenuDetailModal()">Закрыть</button>
+    </div>
+</div>
+
+<!-- Полноэкранный просмотр -->
+<div class="fullscreen-overlay" id="fullscreenOverlay">
+    <span class="fullscreen-close" id="fullscreenClose">&times;</span>
+    <span class="fullscreen-nav prev-fs" id="fullscreenPrev">←</span>
+    <img src="" alt="" id="fullscreenImage">
+    <span class="fullscreen-nav next-fs" id="fullscreenNext">→</span>
+    <div class="fullscreen-counter" id="fullscreenCounter">1 / 4</div>
+</div>
+
+<!-- Политика конфиденциальности -->
+<div id="privacyModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" style="float: right; font-size: 1.5rem; cursor: pointer;" id="closeModal">&times;</span>
+        <h3 style="margin-top: 0;">Политика конфиденциальности</h3>
+        <p><strong>1. Какие данные мы собираем</strong><br>Для бронирования стола мы запрашиваем количество гостей и желаемое время.</p>
+        <p><strong>2. Цель обработки</strong><br>Ваши данные используются только для обработки заявки на бронирование.</p>
+        <p><strong>3. Как происходит бронирование</strong><br>После заполнения формы вы связываетесь с менеджером в Telegram для подтверждения.</p>
+        <p><strong>4. Ваши права</strong><br>Вы можете запросить удаление ваших данных, написав на email: <strong>sanilon217@gmail.com</strong></p>
+        <p><strong>Контакты:</strong> Telegram: <a href="https://t.me/dayanameow" target="_blank">@dayanameow</a></p>
+    </div>
+</div>
+
+<!-- ОСНОВНОЙ КОНТЕЙНЕР -->
+<div class="container" id="mainContainer" style="display: none;">
+    <div class="nav-bar">
+        <button class="nav-link active" data-page="main">ГЛАВНАЯ</button>
+        <button class="nav-link" data-page="menu">МЕНЮ</button>
+        <button class="nav-link" data-page="booking">БРОНЬ</button>
+        <button class="nav-link" data-page="reviews">ОТЗЫВЫ</button>
+        <button class="nav-link" data-page="contacts">КОНТАКТЫ</button>
+    </div>
+
+    <!-- ГЛАВНАЯ -->
+    <div id="main-page" class="page active-page">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.2rem; margin-bottom: 0.5rem;">
+            <div class="brand-logo">ДИП</div>
+            <div class="subtitle">г. Кропоткин, Красная ул., 168/1</div>
+        </div>
+        
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <div class="slide" data-full-img="https://avatars.mds.yandex.net/get-altay/14185024/2a000001941925734eb98261248330c551d2/XXXL">
+                    <img src="https://avatars.mds.yandex.net/get-altay/14185024/2a000001941925734eb98261248330c551d2/XXXL" alt="ДИП интерьер">
+                    <div class="slide-number">1/4</div>
+                </div>
+                <div class="slide" data-full-img="https://avatars.mds.yandex.net/get-altay/19876101/2a0000019b6140feb2f1da048375cad4f29b/XXXL">
+                    <img src="https://avatars.mds.yandex.net/get-altay/19876101/2a0000019b6140feb2f1da048375cad4f29b/XXXL" alt="ДИП уют">
+                    <div class="slide-number">2/4</div>
+                </div>
+                <div class="slide" data-full-img="https://avatars.mds.yandex.net/get-altay/15285359/2a00000193fd7f74f0211baaa065ed0f89fa/XXXL">
+                    <img src="https://avatars.mds.yandex.net/get-altay/15285359/2a00000193fd7f74f0211baaa065ed0f89fa/XXXL" alt="ДИП коктейли">
+                    <div class="slide-number">3/4</div>
+                </div>
+                <div class="slide" data-full-img="https://avatars.mds.yandex.net/get-altay/6550540/2a00000190033b7467aa842830aa42f1ffc9/XXXL">
+                    <img src="https://avatars.mds.yandex.net/get-altay/6550540/2a00000190033b7467aa842830aa42f1ffc9/XXXL" alt="ДИП атмосфера">
+                    <div class="slide-number">4/4</div>
+                </div>
+            </div>
+            <button class="slider-btn prev" id="prevSlide">←</button>
+            <button class="slider-btn next" id="nextSlide">→</button>
+            <div class="dots" id="dotsContainer"></div>
+        </div>
+        
+        <div class="info-card">
+            <p style="font-size: clamp(1rem, 4vw, 1.3rem); font-weight: 500;">Атмосфера, люди и уют, которые создают особое пространство вне времени.</p>
+            <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <button class="btn-outline" data-nav="menu">ПОСМОТРЕТЬ МЕНЮ</button>
+                <button class="btn-outline" data-nav="booking">ЗАБРОНИРОВАТЬ СТОЛ</button>
+            </div>
+        </div>
+        
+        <div class="info-grid-inline">
+            <div class="info-card"><h3>⚡ Атмосфера</h3><p class="secondary-text">ДИП — это не просто место, это состояние. Уютный полумрак, приглушённый свет, комфортные зоны для отдыха.</p></div>
+            <div class="info-card"><h3>🍃 Ароматный микс</h3><p class="secondary-text">Большой выбор ароматных миксов, чайная карта. Уделяем внимание каждой детали.</p></div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="hours-section glass-card" data-nav="contacts">
+            <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;"><span>🕒 ЕЖЕДНЕВНО 17:00 - 00:00</span></div>
+            <div class="secondary-text" style="margin-top:0.5rem;">📍 г. Кропоткин, Красная ул., 168/1</div>
+        </div>
+    </div>
+
+    <!-- МЕНЮ -->
+    <div id="menu-page" class="page">
+        <h2>Наше меню</h2>
+        <p class="secondary-text" style="margin-bottom: 1rem;">👆 Нажмите на любое блюдо, чтобы узнать состав и детали</p>
+        
+        <!-- Строка поиска -->
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Поиск по меню (например: 'улун', 'фрукт', 'чай')...">
+        </div>
+        
+        <div class="menu-grid" id="menuGrid"></div>
+        <div class="info-card" style="text-align: center;">
+            <button class="btn-outline" data-nav="booking" style="margin-top: 0.8rem;">Забронировать стол →</button>
+        </div>
+    </div>
+
+    <!-- БРОНИРОВАНИЕ -->
+    <div id="booking-page" class="page">
+        <h2>Бронирование стола <span class="telegram-badge">✈️ связь с менеджером</span></h2>
+        <div class="info-card" style="max-width: 500px; margin: 0 auto;">
+            <div class="booking-form">
+                <label>📅 Дата *</label>
+                <input type="date" id="bookDate" value="">
+                <label>⏰ Желаемое время *</label>
+                <input type="text" id="bookTime" placeholder="например, 20:00" maxlength="10">
+                <div style="font-size: 0.7rem; color: #7C828A; margin-top: 4px;">⚡ Работаем с 17:00 до 00:00</div>
+                <label>👥 Количество гостей *</label>
+                <input type="number" id="bookGuests" placeholder="2" min="1" max="20">
+                <div class="captcha-container">
+                    <span class="captcha-question" id="captchaQuestion">5 + 3 = ?</span>
+                    <input type="number" id="captchaInput" class="captcha-input" placeholder="Ответ" style="width: 80px;">
+                    <button type="button" class="captcha-refresh" id="refreshCaptcha">⟳</button>
+                </div>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="agreeCheckbox"> 
+                    Я принимаю <span class="privacy-link" id="privacyLink">условия обработки данных</span>
+                </label>
+                <div style="margin-top: 1rem;">
+                    <button class="manager-btn" id="sendToTelegramBtn">✈️ ОТПРАВИТЬ ЗАЯВКУ В TELEGRAM</button>
+                </div>
+                <div id="bookingMessage" style="margin-top: 0.8rem; font-size: 0.85rem; text-align: center;"></div>
+            </div>
+            <p class="secondary-text" style="margin-top: 0.8rem; text-align: center;">
+                Нажмите на кнопку, чтобы перейти в Telegram.<br>
+                Сообщение будет автоматически заполнено — останется только отправить.
+            </p>
+        </div>
+    </div>
+
+    <!-- ОТЗЫВЫ -->
+    <div id="reviews-page" class="page">
+        <h2>Отзывы гостей</h2>
+        <div class="info-card" style="text-align: center; margin-bottom: 1.5rem;">
+            <div style="font-size: 3rem; margin-bottom: 0.5rem;">⭐</div>
+            <p style="font-size: 2rem; font-weight: 700;">4,5</p>
+            <p class="secondary-text">Средняя оценка на Яндекс.Картах</p>
+            <div style="margin-top: 1rem;">
+                <span class="telegram-badge" style="background: rgba(255,184,59,0.2); border-color: #FFB83B;">★ ★ ★ ★ ☆</span>
+            </div>
+        </div>
+        <div class="reviews-grid" id="reviewsContainer"></div>
+        <div class="info-card" style="text-align:center;">
+            <a href="https://yandex.ru/maps/org/deep/126677960348/reviews/" target="_blank" class="yandex-link" rel="noopener noreferrer" style="margin-top: 0;">
+                📍 Смотреть все отзывы на Яндекс.Картах →
+            </a>
+            <div class="divider" style="margin: 1rem 0;"></div>
+            <button class="btn-outline" data-nav="booking">Забронировать стол →</button>
+        </div>
+    </div>
+
+    <!-- КОНТАКТЫ -->
+    <div id="contacts-page" class="page">
+        <h2>Как нас найти</h2>
+        <div class="info-card">
+            <p><strong>📍 Адрес:</strong> г. Кропоткин, Красная ул., 168/1</p>
+            <p><strong>✈️ Telegram менеджер:</strong> <a href="https://t.me/dayanameow" target="_blank" class="contact-link">@dayanameow</a></p>
+            <div class="divider"></div>
+            <div class="how-to-get-photo">
+                <img class="how-to-get-img" id="directionPhoto" 
+                     src="https://sun9-82.userapi.com/s/v1/ig2/HA5X3Ztq0WaPcdgytb7wfC2t2LuV_-0MG5eYkM0hyf3ti7tSFFXqoZeG-AsmFBpUyrd2lzv7AtMTRtUpi_1R_yXy.jpg?quality=95&as=32x36,48x53,72x80,108x120,160x178,240x267,360x401,480x534,540x601,640x712,720x801,1080x1202&from=bu&u=XtJdTsWzU1fJINNhaPY0pg_bnANSggXImHYQHOqYUlE&cs=1080x0" 
+                     alt="ДИП на карте - рейтинг и часы работы" 
+                     title="Нажмите для увеличения">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <h3 style="font-size: 1.2rem; color: #A6ADB7; margin: 0.5rem 0 0.8rem 0; border-left: 3px solid #A6ADB7; padding-left: 10px;">🗺️ Ориентиры</h3>
+                <div class="direction-steps">
+                    <p><span>1.</span> Ориентир — здание с вывеской «ДИП» на фасаде.</p>
+                    <p><span>2.</span> Вход со стороны двора за аркой, под освещённым козырьком.</p>
+                    <p><span>3.</span> Рядом находится остановка «Красная улица», от неё 1 минута пешком.</p>
+                    <p><span>4.</span> Если возникнут сложности — напишите менеджеру в Telegram, поможем!</p>
+                </div>
+            </div>
+            <p class="secondary-text" style="padding: 0.8rem; text-align: center; background: rgba(0,0,0,0.2); border-radius: 16px; margin: 1rem 0;">🚶‍♂️ От центральной площади 5 минут пешком. Яркая вывеска и свет внутри помогут не пройти мимо.</p>
+            <div>
+                <h3>Карта проезда</h3>
+                <div class="map-wrapper" id="mapWrapper" title="Открыть в Яндекс.Картах с отзывами">
+                    <iframe 
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A8d4a5f6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5&source=constructor&mode=search&text=Красная%20ул.%20168%2F1%20Кропоткин&z=17" 
+                        loading="lazy"
+                        id="mapIframe">
+                    </iframe>
+                    <div class="map-overlay-hint">📍 Открыть в Яндекс.Картах — смотреть отзывы</div>
+                </div>
+                <p class="secondary-text" style="margin-top: 0.5rem;">г. Кропоткин, Красная ул., 168/1</p>
+            </div>
+        </div>
+        <div class="hours-section glass-card" style="margin-top: 1rem;"><div>🕒 Ежедневно: 17:00 – 00:00</div></div>
+    </div>
+    
+    <footer>
+        <div>© ДИП — атмосферная кальянная в Кропоткине</div>
+        <div class="secondary-text">✦ Чай, уют, тишина ✦</div>
+        <div class="seo-keywords">
+            Кальянная Кропоткин | ДИП | Кальяны Кропоткин | Лучшая кальянная на Красной улице
+        </div>
+    </footer>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
