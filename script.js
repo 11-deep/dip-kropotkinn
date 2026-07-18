@@ -9,9 +9,9 @@ let appSettings = {
     },
     contacts: {
         address: "г. Кропоткин, Красная ул., 168/1",
-        telegram: "dayanameow",
+        telegram: "deep_hookah",
         hours: "ЕЖЕДНЕВНО 17:00 - 00:00",
-        email: "sanilon217@gmail.com"
+        email: ""
     },
     sliderImages: [
         "https://avatars.mds.yandex.net/get-altay/14185024/2a000001941925734eb98261248330c551d2/XXXL",
@@ -78,7 +78,7 @@ function saveSettings() {
         }
     }
     localStorage.setItem('dip_admin_settings', JSON.stringify(appSettings));
-    showToast('✅ Настройки сохранены', false);
+    showToast('Настройки сохранены', false);
 }
 
 function applySettingsToUI() {
@@ -96,7 +96,7 @@ function applySettingsToUI() {
     const addressElements = document.querySelectorAll('#addressText, #contactsAddress, #contactsAddressSmall');
     addressElements.forEach(el => { if(el) el.textContent = appSettings.contacts.address; });
     const hoursElements = document.querySelectorAll('#hoursText, #contactsHoursText');
-    hoursElements.forEach(el => { if(el) el.textContent = `🕒 ${appSettings.contacts.hours}`; });
+    hoursElements.forEach(el => { if(el) el.textContent = appSettings.contacts.hours; });
     const tgLinks = document.querySelectorAll('#contactsTelegramLink, #policyTelegramLink');
     tgLinks.forEach(link => {
         if(link) {
@@ -456,7 +456,7 @@ function importData(file) {
 
 // Сброс к оригиналу
 function resetToDefault() {
-    if (confirm('⚠️ ВНИМАНИЕ! Все изменения будут потеряны. Вы уверены, что хотите сбросить все настройки к оригиналу?')) {
+    if (confirm('ВНИМАНИЕ! Все изменения будут потеряны. Вы уверены, что хотите сбросить все настройки к оригиналу?')) {
         localStorage.removeItem('dip_admin_settings');
         location.reload();
     }
@@ -550,7 +550,17 @@ function openMenuDetailModal(name, price, composition, desc) {
         document.getElementById('modalItemName').textContent = name;
         document.getElementById('modalItemPrice').textContent = price + '₽';
         document.getElementById('modalItemComposition').textContent = composition;
-        document.getElementById('modalItemDesc').textContent = desc || '';
+        
+        // Скрываем описание, если оно пустое
+        const descElement = document.getElementById('modalItemDesc');
+        if (desc && desc.trim() !== '') {
+            descElement.textContent = desc;
+            descElement.style.display = 'block';
+        } else {
+            descElement.textContent = '';
+            descElement.style.display = 'none';
+        }
+        
         modal.classList.add('active');
     }
 }
