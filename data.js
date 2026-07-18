@@ -3,7 +3,7 @@ const menuData = [
     // ========== КАЛЬЯНЫ ==========
     {
         title: "ДЫМНЫЕ МИКСЫ",
-        img: "https://i.pinimg.com/1200x/9b/9e/9c/9b9e9cc10a6b64855ec8810b04fa4f29.jpg",
+        img: "https://chatgpt.com/backend-api/estuary/content?id=file_000000001cb88246bc86a0da8959bf14&ts=495656&p=fs&cid=1&sig=c72db02970689712cc2243a381b2e6a2bff80707c40ebeac24b99a4d1abe1e4d&v=0",
         items: [
             { name: "Лёгкий пар", price: 1300, composition: "Мягкая, воздушная подача.", desc: "Идеальный выбор для тех, кто ценит лёгкость и комфорт. Нежный, бархатный пар без перегруза." },
             { name: "Пар покрепче", price: 1600, composition: "Насыщенная, плотная подача.", desc: "Для настоящих ценителей: густой, мощный пар с яркой отдачей и глубоким вкусом." }
