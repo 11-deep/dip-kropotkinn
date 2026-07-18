@@ -85,7 +85,7 @@
     <!-- ГЛАВНАЯ -->
     <div id="main-page" class="page active-page">
         <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.2rem; margin-bottom: 0.5rem;">
-            <div class="brand-logo">ДИП</div>
+            <div class="brand-logo" id="brandLogo">ДИП</div>
             <div class="subtitle">г. Кропоткин, Красная ул., 168/1</div>
         </div>
         
@@ -114,7 +114,13 @@
         </div>
         
         <div class="info-card">
-            <p style="font-size: clamp(1rem, 4vw, 1.3rem); font-weight: 500;">Атмосфера, люди и уют, которые создают особое пространство вне времени.</p>
+            <p style="font-size: clamp(1rem, 4vw, 1.3rem); font-weight: 500;">
+                ДИП — это не просто место, это состояние. 
+                Уютный полумрак, приглушённый свет, 
+                комфортные зоны для отдыха. 
+                Здесь своя энергетика и ортодоксальный подход 
+                к кальянам и чаю.
+            </p>
             <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
                 <button class="btn-outline" data-nav="menu">ПОСМОТРЕТЬ МЕНЮ</button>
                 <button class="btn-outline" data-nav="booking">ЗАБРОНИРОВАТЬ СТОЛ</button>
@@ -122,14 +128,30 @@
         </div>
         
         <div class="info-grid-inline">
-            <div class="info-card"><h3>⚡ Атмосфера</h3><p class="secondary-text">ДИП — это не просто место, это состояние. Уютный полумрак, приглушённый свет, комфортные зоны для отдыха.</p></div>
-            <div class="info-card"><h3>🍃 Ароматный микс</h3><p class="secondary-text">Большой выбор ароматных миксов, чайная карта. Уделяем внимание каждой детали.</p></div>
+            <div class="info-card">
+                <h3>⚡ Атмосфера</h3>
+                <p class="secondary-text">
+                    ДИП — это не просто место, это состояние. 
+                    Уютный полумрак, приглушённый свет, 
+                    комфортные зоны для отдыха. 
+                    Вайб, который хочется сохранить в памяти.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>🍃 Ароматный микс</h3>
+                <p class="secondary-text">
+                    Большой выбор ароматных миксов, чайная карта, 
+                    авторские лимонады. Уделяем внимание каждой детали.
+                </p>
+            </div>
         </div>
         
         <div class="divider"></div>
         
         <div class="hours-section glass-card" data-nav="contacts">
-            <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;"><span>🕒 ЕЖЕДНЕВНО 17:00 - 00:00</span></div>
+            <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+                <span>🕒 ЕЖЕДНЕВНО 17:00 - 00:00</span>
+            </div>
             <div class="secondary-text" style="margin-top:0.5rem;">📍 г. Кропоткин, Красная ул., 168/1</div>
         </div>
     </div>
@@ -139,9 +161,8 @@
         <h2>Наше меню</h2>
         <p class="secondary-text" style="margin-bottom: 1rem;">👆 Нажмите на любое блюдо, чтобы узнать состав и детали</p>
         
-        <!-- Строка поиска -->
         <div class="search-container">
-            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Поиск по меню (например: 'улун', 'фрукт', 'чай')...">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Поиск по меню (например: 'улун', 'фрукт', 'кальян')...">
         </div>
         
         <div class="menu-grid" id="menuGrid"></div>
@@ -214,19 +235,21 @@
             <div class="how-to-get-photo">
                 <img class="how-to-get-img" id="directionPhoto" 
                      src="https://sun9-82.userapi.com/s/v1/ig2/HA5X3Ztq0WaPcdgytb7wfC2t2LuV_-0MG5eYkM0hyf3ti7tSFFXqoZeG-AsmFBpUyrd2lzv7AtMTRtUpi_1R_yXy.jpg?quality=95&as=32x36,48x53,72x80,108x120,160x178,240x267,360x401,480x534,540x601,640x712,720x801,1080x1202&from=bu&u=XtJdTsWzU1fJINNhaPY0pg_bnANSggXImHYQHOqYUlE&cs=1080x0" 
-                     alt="ДИП на карте - рейтинг и часы работы" 
+                     alt="ДИП на карте" 
                      title="Нажмите для увеличения">
             </div>
             <div style="margin-bottom: 1rem;">
                 <h3 style="font-size: 1.2rem; color: #A6ADB7; margin: 0.5rem 0 0.8rem 0; border-left: 3px solid #A6ADB7; padding-left: 10px;">🗺️ Ориентиры</h3>
                 <div class="direction-steps">
-                    <p><span>1.</span> Ориентир — здание с вывеской «ДИП» на фасаде.</p>
-                    <p><span>2.</span> Вход со стороны двора за аркой, под освещённым козырьком.</p>
-                    <p><span>3.</span> Рядом находится остановка «Красная улица», от неё 1 минута пешком.</p>
+                    <p><span>1.</span> Ориентир — здание с вывеской «ДИП» на фасаде. Ищите нас за <strong>клумбой с цветочными часами</strong>.</p>
+                    <p><span>2.</span> Вход со стороны двора за аркой, под освещённым козырьком. Почувствуйте <strong>энергетику</strong> этого места.</p>
+                    <p><span>3.</span> Рядом находится остановка <strong>«Ворошилова»</strong>, от неё буквально 1 минута пешком.</p>
                     <p><span>4.</span> Если возникнут сложности — напишите менеджеру в Telegram, поможем!</p>
                 </div>
             </div>
-            <p class="secondary-text" style="padding: 0.8rem; text-align: center; background: rgba(0,0,0,0.2); border-radius: 16px; margin: 1rem 0;">🚶‍♂️ От центральной площади 5 минут пешком. Яркая вывеска и свет внутри помогут не пройти мимо.</p>
+            <p class="secondary-text" style="padding: 0.8rem; text-align: center; background: rgba(0,0,0,0.2); border-radius: 16px; margin: 1rem 0;">
+                🚶‍♂️ От центральной площади 5 минут пешком. Яркая вывеска и свет внутри помогут не пройти мимо.
+            </p>
             <div>
                 <h3>Карта проезда</h3>
                 <div class="map-wrapper" id="mapWrapper" title="Открыть в Яндекс.Картах с отзывами">
@@ -240,12 +263,14 @@
                 <p class="secondary-text" style="margin-top: 0.5rem;">г. Кропоткин, Красная ул., 168/1</p>
             </div>
         </div>
-        <div class="hours-section glass-card" style="margin-top: 1rem;"><div>🕒 Ежедневно: 17:00 – 00:00</div></div>
+        <div class="hours-section glass-card" style="margin-top: 1rem;">
+            <div>🕒 Ежедневно: 17:00 – 00:00</div>
+        </div>
     </div>
     
     <footer>
         <div>© ДИП — атмосферная кальянная в Кропоткине</div>
-        <div class="secondary-text">✦ Чай, уют, тишина ✦</div>
+        <div class="secondary-text">✦ Кальяны, чай, уют, вайб ✦</div>
         <div class="seo-keywords">
             Кальянная Кропоткин | ДИП | Кальяны Кропоткин | Лучшая кальянная на Красной улице
         </div>
