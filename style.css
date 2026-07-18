@@ -991,3 +991,96 @@ iframe {
         padding: 10px 12px;
     }
 }
+/* ========================================
+   ОРИЕНТИРЫ - ПРОСТОЙ СПИСОК
+   ======================================== */
+
+.direction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.direction-list .dir-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: clamp(0.85rem, 2.6vw, 1rem);
+    line-height: 1.5;
+    color: #D0D3D8;
+    padding: 4px 0;
+}
+
+.direction-list .dir-num {
+    flex-shrink: 0;
+    color: #A6ADB7;
+    font-weight: 600;
+    font-size: clamp(0.85rem, 2.6vw, 1rem);
+    min-width: 22px;
+}
+
+.direction-list .dir-text {
+    flex: 1;
+    word-wrap: break-word;
+}
+
+.direction-list .dir-text strong {
+    color: #E5E2DC;
+    font-weight: 600;
+}
+
+.dir-footer-simple {
+    margin-top: 14px;
+    padding: 12px 0;
+    color: #8A909A;
+    font-size: clamp(0.78rem, 2.4vw, 0.92rem);
+    line-height: 1.6;
+    border-top: 1px solid rgba(166, 173, 183, 0.1);
+    text-align: center;
+}
+
+/* ========================================
+   АДАПТИВ ДЛЯ ТЕЛЕФОНОВ
+   ======================================== */
+
+@media (max-width: 480px) {
+    .direction-list {
+        gap: 8px;
+    }
+
+    .direction-list .dir-item {
+        font-size: 0.82rem;
+        line-height: 1.5;
+        padding: 3px 0;
+        gap: 8px;
+    }
+
+    .direction-list .dir-num {
+        font-size: 0.82rem;
+        min-width: 20px;
+    }
+
+    .dir-footer-simple {
+        font-size: 0.72rem;
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .direction-list .dir-item {
+        font-size: 0.75rem;
+        gap: 6px;
+    }
+
+    .direction-list .dir-num {
+        font-size: 0.75rem;
+        min-width: 18px;
+    }
+
+    .dir-footer-simple {
+        font-size: 0.68rem;
+    }
+}
