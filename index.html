@@ -14,14 +14,14 @@
 
 <div class="grain-overlay"></div>
 <div class="toast-message" id="toastMsg"></div>
-<div class="security-note" id="securityNote">🔒 HTTPS: </div>
-<div class="settings-icon" id="settingsIcon">⚙️ Настройки 18+</div>
+<div class="security-note" id="securityNote">HTTPS: </div>
+<div class="settings-icon" id="settingsIcon">Настройки 18+</div>
 
 <!-- Модальное окно 18+ -->
 <div id="ageModal" class="modal">
     <div class="modal-content">
         <h3>ДИП</h3>
-        <p>❗ Вам есть 18 лет?<br>Наш сайт и заведение предназначены только для совершеннолетних гостей.</p>
+        <p>Вам есть 18 лет?<br>Наш сайт и заведение предназначены только для совершеннолетних гостей.</p>
         <div class="age-buttons">
             <button id="ageYesBtn" class="age-btn yes">Да, мне есть 18</button>
             <button id="ageNoBtn" class="age-btn no">Нет, мне меньше 18</button>
@@ -44,7 +44,7 @@
         <span class="menu-detail-close" id="menuDetailClose">&times;</span>
         <h3 id="modalItemName">Название</h3>
         <div class="detail-price" id="modalItemPrice">0₽</div>
-        <div class="detail-composition"><strong> Состав:</strong><br><span id="modalItemComposition">-</span></div>
+        <div class="detail-composition"><strong>Состав:</strong><br><span id="modalItemComposition">-</span></div>
         <div id="modalItemDesc" style="color: #7C828A; margin-top: 0.5rem;"></div>
         <button class="btn-outline" style="margin-top: 1rem;" onclick="closeMenuDetailModal()">Закрыть</button>
     </div>
@@ -115,7 +115,7 @@
         
         <div class="info-card">
             <p style="font-size: clamp(1rem, 4vw, 1.3rem); font-weight: 500;">
-              
+                ДИП — это не просто место, это состояние. Уютный полумрак, приглушённый свет, комфортные зоны для отдыха. Здесь своя энергетика и ортодоксальный подход к кальянам и чаю.
             </p>
             <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
                 <button class="btn-outline" data-nav="menu">ПОСМОТРЕТЬ МЕНЮ</button>
@@ -125,7 +125,7 @@
         
         <div class="info-grid-inline">
             <div class="info-card">
-                <h3> Атмосфера</h3>
+                <h3>Атмосфера</h3>
                 <p class="secondary-text">
                     ДИП — это не просто место, это состояние. 
                     Уютный полумрак, приглушённый свет, 
@@ -134,7 +134,7 @@
                 </p>
             </div>
             <div class="info-card">
-                <h3> Ароматный микс</h3>
+                <h3>Ароматный микс</h3>
                 <p class="secondary-text">
                     Большой выбор ароматных миксов, чайная карта, 
                     авторские лимонады. Уделяем внимание каждой детали.
@@ -146,19 +146,19 @@
         
         <div class="hours-section glass-card" data-nav="contacts">
             <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-                <span> ЕЖЕДНЕВНО 17:00 - 00:00</span>
+                <span>ЕЖЕДНЕВНО 17:00 - 00:00</span>
             </div>
-            <div class="secondary-text" style="margin-top:0.5rem;"> г. Кропоткин, Красная ул., 168/1</div>
+            <div class="secondary-text" style="margin-top:0.5rem;">г. Кропоткин, Красная ул., 168/1</div>
         </div>
     </div>
 
     <!-- МЕНЮ -->
     <div id="menu-page" class="page">
         <h2>Наше меню</h2>
-        <p class="secondary-text" style="margin-bottom: 1rem;"> Нажмите на любое блюдо, чтобы узнать состав и детали</p>
+        <p class="secondary-text" style="margin-bottom: 1rem;">Нажмите на любое блюдо, чтобы узнать состав и детали</p>
         
         <div class="search-container">
-            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Поиск по меню (например: 'улун', 'фрукт', 'кальян')...">
+            <input type="text" id="searchInput" class="search-input" placeholder="Поиск по меню (например: 'улун', 'фрукт', 'кальян')...">
         </div>
         
         <div class="menu-grid" id="menuGrid"></div>
@@ -169,15 +169,15 @@
 
     <!-- БРОНИРОВАНИЕ -->
     <div id="booking-page" class="page">
-        <h2>Бронирование стола <span class="telegram-badge"> связь с менеджером</span></h2>
+        <h2>Бронирование стола <span class="telegram-badge">связь с менеджером</span></h2>
         <div class="info-card" style="max-width: 500px; margin: 0 auto;">
             <div class="booking-form">
-                <label> Дата *</label>
+                <label>Дата *</label>
                 <input type="date" id="bookDate" value="">
-                <label> Желаемое время *</label>
+                <label>Желаемое время *</label>
                 <input type="text" id="bookTime" placeholder="например, 20:00" maxlength="10">
-                <div style="font-size: 0.7rem; color: #7C828A; margin-top: 4px;"> Работаем с 17:00 до 00:00</div>
-                <label> Количество гостей *</label>
+                <div style="font-size: 0.7rem; color: #7C828A; margin-top: 4px;">Работаем с 17:00 до 00:00</div>
+                <label>Количество гостей *</label>
                 <input type="number" id="bookGuests" placeholder="2" min="1" max="20">
                 <div class="captcha-container">
                     <span class="captcha-question" id="captchaQuestion">5 + 3 = ?</span>
@@ -189,7 +189,7 @@
                     Я принимаю <span class="privacy-link" id="privacyLink">условия обработки данных</span>
                 </label>
                 <div style="margin-top: 1rem;">
-                    <button class="manager-btn" id="sendToTelegramBtn"> ОТПРАВИТЬ ЗАЯВКУ В TELEGRAM</button>
+                    <button class="manager-btn" id="sendToTelegramBtn">ОТПРАВИТЬ ЗАЯВКУ В TELEGRAM</button>
                 </div>
                 <div id="bookingMessage" style="margin-top: 0.8rem; font-size: 0.85rem; text-align: center;"></div>
             </div>
@@ -204,7 +204,7 @@
     <div id="reviews-page" class="page">
         <h2>Отзывы гостей</h2>
         <div class="info-card" style="text-align: center; margin-bottom: 1.5rem;">
-            <div style="font-size: 3rem; margin-bottom: 0.5rem;"></div>
+            <div style="font-size: 3rem; margin-bottom: 0.5rem;">★</div>
             <p style="font-size: 2rem; font-weight: 700;">4,5</p>
             <p class="secondary-text">Средняя оценка на Яндекс.Картах</p>
             <div style="margin-top: 1rem;">
@@ -214,75 +214,85 @@
         <div class="reviews-grid" id="reviewsContainer"></div>
         <div class="info-card" style="text-align:center;">
             <a href="https://yandex.ru/maps/org/deep/126677960348/reviews/" target="_blank" class="yandex-link" rel="noopener noreferrer" style="margin-top: 0;">
-                 Смотреть все отзывы на Яндекс.Картах →
+                Смотреть все отзывы на Яндекс.Картах →
             </a>
             <div class="divider" style="margin: 1rem 0;"></div>
             <button class="btn-outline" data-nav="booking">Забронировать стол →</button>
         </div>
     </div>
 
-    
-   <!-- КОНТАКТЫ -->
-<div id="contacts-page" class="page">
-    <h2>Как нас найти</h2>
-    <div class="info-card">
-        <p><strong> Адрес:</strong> г. Кропоткин, Красная ул., 168/1</p>
-        <p><strong> Telegram менеджер:</strong> <a href="https://t.me/dayanameow" target="_blank" class="contact-link">@dayanameow</a></p>
-        <div class="divider"></div>
-
-        <!-- ФОТО -->
-        <div class="how-to-get-photo">
-            <img class="how-to-get-img" id="directionPhoto" 
-                 src="https://sun9-82.userapi.com/s/v1/ig2/HA5X3Ztq0WaPcdgytb7wfC2t2LuV_-0MG5eYkM0hyf3ti7tSFFXqoZeG-AsmFBpUyrd2lzv7AtMTRtUpi_1R_yXy.jpg?quality=95&as=32x36,48x53,72x80,108x120,160x178,240x267,360x401,480x534,540x601,640x712,720x801,1080x1202&from=bu&u=XtJdTsWzU1fJINNhaPY0pg_bnANSggXImHYQHOqYUlE&cs=1080x0" 
-                 alt="ДИП на карте" 
-                 title="Нажмите для увеличения">
-        </div>
-
-        <!-- ОРИЕНТИРЫ (ОБНОВЛЁННЫЕ) -->
-        <div style="margin-bottom: 1rem;">
-            <h3 style="font-size: 1.2rem; color: #A6ADB7; margin: 0.5rem 0 0.8rem 0; border-left: 3px solid #A6ADB7; padding-left: 10px;">🗺️ Ориентиры</h3>
-            <div class="direction-steps">
-                <div class="direction-step">
-                    <span class="step-number">1.</span>
-                    <span class="step-text">Ориентир — здание с вывеской «ДИП» на фасаде. Ищите нас за <strong>клумбой с цветочными часами</strong>.</span>
+    <!-- КОНТАКТЫ -->
+    <div id="contacts-page" class="page">
+        <h2>Как нас найти</h2>
+        <div class="info-card">
+            <p><strong>Адрес:</strong> г. Кропоткин, Красная ул., 168/1</p>
+            <p><strong>Telegram менеджер:</strong> <a href="https://t.me/dayanameow" target="_blank" class="contact-link">@dayanameow</a></p>
+            <div class="divider"></div>
+            <div class="how-to-get-photo">
+                <img class="how-to-get-img" id="directionPhoto" 
+                     src="https://sun9-82.userapi.com/s/v1/ig2/HA5X3Ztq0WaPcdgytb7wfC2t2LuV_-0MG5eYkM0hyf3ti7tSFFXqoZeG-AsmFBpUyrd2lzv7AtMTRtUpi_1R_yXy.jpg?quality=95&as=32x36,48x53,72x80,108x120,160x178,240x267,360x401,480x534,540x601,640x712,720x801,1080x1202&from=bu&u=XtJdTsWzU1fJINNhaPY0pg_bnANSggXImHYQHOqYUlE&cs=1080x0" 
+                     alt="ДИП на карте" 
+                     title="Нажмите для увеличения">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <h3 style="font-size: 1.2rem; color: #A6ADB7; margin: 0.5rem 0 0.8rem 0; border-left: 3px solid #A6ADB7; padding-left: 10px;">Ориентиры</h3>
+                
+                <div class="direction-steps-mobile">
+                    <div class="direction-item">
+                        <span class="direction-num">1</span>
+                        <div class="direction-text">
+                            <strong>Клумба с цветочными часами</strong>
+                            <span>Здание с вывеской «ДИП» на фасаде. Ищите нас за клумбой с цветочными часами.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="direction-item">
+                        <span class="direction-num">2</span>
+                        <div class="direction-text">
+                            <strong>Вход со стороны двора</strong>
+                            <span>За аркой, под освещённым козырьком. Почувствуйте энергетику этого места.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="direction-item">
+                        <span class="direction-num">3</span>
+                        <div class="direction-text">
+                            <strong>Остановка «Ворошилова»</strong>
+                            <span>Рядом с нами, от неё буквально 1 минута пешком.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="direction-item">
+                        <span class="direction-num">4</span>
+                        <div class="direction-text">
+                            <strong>Помощь онлайн</strong>
+                            <span>Если возникнут сложности — напишите менеджеру в Telegram, поможем!</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="direction-step">
-                    <span class="step-number">2.</span>
-                    <span class="step-text">Вход со стороны двора за аркой, под освещённым козырьком. Почувствуйте <strong>энергетику</strong> этого места.</span>
-                </div>
-                <div class="direction-step">
-                    <span class="step-number">3.</span>
-                    <span class="step-text">Рядом находится остановка <strong>«Ворошилова»</strong>, от неё буквально 1 минута пешком.</span>
-                </div>
-                <div class="direction-step">
-                    <span class="step-number">4.</span>
-                    <span class="step-text">Если возникнут сложности — напишите менеджеру в Telegram, поможем!</span>
+                
+                <div class="direction-footer">
+                    От центральной площади 5 минут пешком. Яркая вывеска и свет внутри помогут не пройти мимо.
                 </div>
             </div>
-        </div>
 
-        <p class="secondary-text" style="padding: 0.8rem; text-align: center; background: rgba(0,0,0,0.2); border-radius: 16px; margin: 1rem 0;">
-            🚶‍♂️ От центральной площади 5 минут пешком. Яркая вывеска и свет внутри помогут не пройти мимо.
-        </p>
-
-        <!-- КАРТА -->
-        <div>
-            <h3>Карта проезда</h3>
-            <div class="map-wrapper" id="mapWrapper" title="Открыть в Яндекс.Картах с отзывами">
-                <iframe 
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A8d4a5f6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5&source=constructor&mode=search&text=Красная%20ул.%20168%2F1%20Кропоткин&z=17" 
-                    loading="lazy"
-                    id="mapIframe">
-                </iframe>
-                <div class="map-overlay-hint"> Открыть в Яндекс.Картах — смотреть отзывы</div>
+            <div>
+                <h3>Карта проезда</h3>
+                <div class="map-wrapper" id="mapWrapper" title="Открыть в Яндекс.Картах с отзывами">
+                    <iframe 
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A8d4a5f6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5&source=constructor&mode=search&text=Красная%20ул.%20168%2F1%20Кропоткин&z=17" 
+                        loading="lazy"
+                        id="mapIframe">
+                    </iframe>
+                    <div class="map-overlay-hint">Открыть в Яндекс.Картах — смотреть отзывы</div>
+                </div>
+                <p class="secondary-text" style="margin-top: 0.5rem;">г. Кропоткин, Красная ул., 168/1</p>
             </div>
-            <p class="secondary-text" style="margin-top: 0.5rem;">г. Кропоткин, Красная ул., 168/1</p>
+        </div>
+        <div class="hours-section glass-card" style="margin-top: 1rem;">
+            <div>Ежедневно: 17:00 – 00:00</div>
         </div>
     </div>
-    <div class="hours-section glass-card" style="margin-top: 1rem;">
-        <div>🕒 Ежедневно: 17:00 – 00:00</div>
-    </div>
-</div>
     
     <footer>
         <div>© ДИП — ортодоксальная кальянная в Кропоткине</div>
