@@ -2,7 +2,7 @@
 const menuData = [
 
         {
-        title: " КАЛЬЯНЫ",
+        title: "ДЫМНЫЕ МИКСЫ",
         img: "https://i.pinimg.com/736x/0a/e4/59/0ae45984abdb3fdb47b9494d2940697d.jpg",
         items: [
             { 
