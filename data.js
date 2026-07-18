@@ -14,7 +14,7 @@ const menuData = [
         title: " ЛИМОНАДЫ",
         img: "https://i.pinimg.com/736x/5b/4f/3b/5b4f3b7ae0b9cda9dc2df95fbb908099.jpg",
         items: [
-            { name: "Мохито", price: 300, composition: "Мята, лайм, содовая.", desc: "" },
+            { name: "Мохито", price: 300, composition: , desc: "" },
             { name: "Клубничный мохито", price: 300, composition: "Клубника, мята, лайм.", desc: "" },
             { name: "Цитрус", price: 300, composition: "Апельсин, лимон, грейпфрут.", desc: "" },
             { name: "Тропик", price: 300, composition: "Ананас, манго, маракуйя.", desc: "" },
