@@ -24,8 +24,8 @@ const menuData = [
     // ЛИМОНАДЫ (БЕЗ ОПИСАНИЙ)
     // ==========================================
     {
-        title: "🥤 ЛИМОНАДЫ",
-        img: "https://images.unsplash.com/photo-1551029506-0807df4e2033?w=800&h=400&fit=crop&crop=center",
+        title: " ЛИМОНАДЫ",
+        img: "https://i.pinimg.com/736x/5b/4f/3b/5b4f3b7ae0b9cda9dc2df95fbb908099.jpg",
         items: [
             { name: "Мохито", price: 300, composition: "Мята, лайм, содовая.", desc: "" },
             { name: "Клубничный мохито", price: 300, composition: "Клубника, мята, лайм.", desc: "" },
