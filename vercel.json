@@ -11,8 +11,8 @@
   ],
   "rewrites": [
     {
-      "source": "/favicon.ico",
-      "destination": "/favicon.ico"
+      "source": "/favicon.ico/%D0%B4%D0%B8%D0%BFng.png",
+      "destination": "/favicon.ico/%D0%B4%D0%B8%D0%BFng.png"
     },
     {
       "source": "/(.*)",
