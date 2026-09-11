@@ -25,75 +25,75 @@ const menuData = [
     // ==========================================
     {
         title: " ЛИМОНАДЫ",
-        img: "https://i.pinimg.com/736x/5b/4f/3b/5b4f3b7ae0b9cda9dc2df95fbb908099.jpg",
+        img: "images/lemonades/mojito.png",
         items: [
-            { name: "Мохито", price: 300, composition: "Мята, лайм, содовая.", desc: "" },
-            { name: "Клубничный мохито", price: 300, composition: "Клубника, мята, лайм.", desc: "" },
-            { name: "Цитрус", price: 300, composition: "Апельсин, лимон, грейпфрут.", desc: "" },
-            { name: "Тропик", price: 300, composition: "Ананас, манго, маракуйя.", desc: "" },
-            { name: "Ежевика-фиалка", price: 300, composition: "Ежевика, фиалка, содовая.", desc: "" },
-            { name: "Черника-лаванда", price: 300, composition: "Черника, лаванда, содовая.", desc: "" },
-            { name: "Бабл-гам", price: 300, composition: "Жвачка, фрукты, содовая.", desc: "" },
-            { name: "Персик-роза", price: 300, composition: "Персик, роза, содовая.", desc: "" },
-            { name: "Яблоко-киви", price: 300, composition: "Яблоко, киви, содовая.", desc: "" },
-            { name: "Вишня-смородина", price: 300, composition: "Вишня, смородина, содовая.", desc: "" }
+            { name: "Мохито", price: 300, img: "images/lemonades/mojito.png", composition: "Мята, лайм, содовая.", desc: "" },
+            { name: "Клубничный мохито", price: 300, img: "images/lemonades/strawberry-mojito.png", composition: "Клубника, мята, лайм.", desc: "" },
+            { name: "Цитрус", price: 300, img: "images/lemonades/citrus.png", composition: "Апельсин, лимон, грейпфрут.", desc: "" },
+            { name: "Тропик", price: 300, img: "images/lemonades/tropic.png", composition: "Ананас, манго, маракуйя.", desc: "" },
+            { name: "Ежевика-фиалка", price: 300, img: "images/lemonades/blackberry-violet.png", composition: "Ежевика, фиалка, содовая.", desc: "" },
+            { name: "Черника-лаванда", price: 300, img: "images/lemonades/blueberry-lavender.png", composition: "Черника, лаванда, содовая.", desc: "" },
+            { name: "Бабл-гам", price: 300, img: "images/lemonades/bubble-gum.png", composition: "Жвачка, фрукты, содовая.", desc: "" },
+            { name: "Персик-роза", price: 300, img: "images/lemonades/peach-rose.png", composition: "Персик, роза, содовая.", desc: "" },
+            { name: "Яблоко-киви", price: 300, img: "images/lemonades/apple-kiwi.png", composition: "Яблоко, киви, содовая.", desc: "" },
+            { name: "Вишня-смородина", price: 300, img: "images/lemonades/cherry-currant.png", composition: "Вишня, смородина, содовая.", desc: "" }
         ]
     },
     {
         title: "ЧЁРНЫЕ ЧАИ",
-        img: "https://i.pinimg.com/736x/3d/a9/19/3da9196f83a05443946603b3b8f09aeb.jpg",
+        img: "images/tea/english-breakfast.jpg",
         items: [
-            { name: "Английский завтрак", price: 600, composition: "Классический чёрный чай.", desc: "Насыщенный купаж классического чёрного чая с плотным и глубоким вкусом." },
-            { name: "Эрл Грей Голубой цветок", price: 600, composition: "Чёрный чай с бергамотом и васильком.", desc: "Благородный чёрный чай с бергамотом и лёгкими цветочными нотами василька." },
-            { name: "Чабрец", price: 600, composition: "Индийский чёрный чай с чабрецом.", desc: "Терпкий индийский чёрный чай с пряным ароматом дикого чабреца." }
+            { name: "Английский завтрак", price: 600, img: "images/tea/english-breakfast.jpg", composition: "Классический чёрный чай.", desc: "Насыщенный купаж классического чёрного чая с плотным и глубоким вкусом." },
+            { name: "Эрл Грей Голубой цветок", price: 600, img: "images/tea/earl-grey-blue-flower.jpg", composition: "Чёрный чай с бергамотом и васильком.", desc: "Благородный чёрный чай с бергамотом и лёгкими цветочными нотами василька." },
+            { name: "Чабрец", price: 600, img: "images/tea/thyme.jpg", composition: "Индийский чёрный чай с чабрецом.", desc: "Терпкий индийский чёрный чай с пряным ароматом дикого чабреца." }
         ]
     },
     {
         title: "ЗЕЛЁНЫЕ ЧАИ",
-        img: "https://i.pinimg.com/1200x/7d/f2/4f/7df24f0e2e86859f6753ef68d5df42bc.jpg",
+        img: "images/tea/sencha.jpg",
         items: [
-            { name: "Сенча", price: 600, composition: "Японский зелёный чай.", desc: "Классический зелёный чай с мягким травянистым вкусом и свежим послевкусием." },
-            { name: "С жасмином", price: 600, composition: "Зелёный чай с цветами жасмина.", desc: "Зелёный чай с натуральными цветами жасмина и тонким цветочным ароматом." },
-            { name: "С мятой", price: 600, composition: "Зелёный чай с мятой.", desc: "Освежающий зелёный чай с прохладными мятными нотами." }
+            { name: "Сенча", price: 600, img: "images/tea/sencha.jpg", composition: "Японский зелёный чай.", desc: "Классический зелёный чай с мягким травянистым вкусом и свежим послевкусием." },
+            { name: "С жасмином", price: 600, img: "images/tea/jasmine.jpg", composition: "Зелёный чай с цветами жасмина.", desc: "Зелёный чай с натуральными цветами жасмина и тонким цветочным ароматом." },
+            { name: "С мятой", price: 600, img: "images/tea/mint.jpg", composition: "Зелёный чай с мятой.", desc: "Освежающий зелёный чай с прохладными мятными нотами." }
         ]
     },
     {
         title: "ТРАВЯНЫЕ ЧАИ",
-        img: "https://i.pinimg.com/1200x/41/18/d9/4118d9ff22e04d7bf4d7a93887d4894e.jpg",
+        img: "images/tea/taiga-herbal.jpg",
         items: [
-            { name: "Таёжный травник", price: 600, composition: "Можжевельник, лесные ягоды, травы.", desc: "Насыщенный чай с можжевельником, лесными ягодами и лёгкими хвойными нотами." },
-            { name: "Монастырский сбор", price: 600, composition: "Травяной сбор с мёдом.", desc: "Мягкий травяной напиток с медовым ароматом и согревающим послевкусием." },
-            { name: "Облепиховый", price: 600, composition: "Облепиха, цитрус, мёд.", desc: "Яркий облепиховый чай с цитрусовой кислинкой и лёгкой сладостью." }
+            { name: "Таёжный травник", price: 600, img: "images/tea/taiga-herbal.jpg", composition: "Можжевельник, лесные ягоды, травы.", desc: "Насыщенный чай с можжевельником, лесными ягодами и лёгкими хвойными нотами." },
+            { name: "Монастырский сбор", price: 600, img: "images/tea/monastery-herbal.jpg", composition: "Травяной сбор с мёдом.", desc: "Мягкий травяной напиток с медовым ароматом и согревающим послевкусием." },
+            { name: "Облепиховый", price: 600, img: "images/tea/sea-buckthorn.jpg", composition: "Облепиха, цитрус, мёд.", desc: "Яркий облепиховый чай с цитрусовой кислинкой и лёгкой сладостью." }
         ]
     },
     {
         title: "КИТАЙСКИЕ ЧАИ",
-        img: "https://i.pinimg.com/1200x/ba/e7/5b/bae75b58403a184e23d917cc427db2ac.jpg",
+        img: "images/tea/milk-oolong.jpg",
         items: [
-            { name: "Молочный улун", price: 600, composition: "Китайский улун.", desc: "Мягкий китайский улун со сливочным вкусом и цветочным ароматом." },
-            { name: "Улун с персиком", price: 600, composition: "Улун с персиком.", desc: "Нежный улун с сочным персиком и фруктовым послевкусием." },
-            { name: "Улун с фейхоа", price: 600, composition: "Улун с фейхоа.", desc: "Свежий улун с экзотическими нотами фейхоа и лёгкой кислинкой." },
-            { name: "Пуэр", price: 600, composition: "Выдержанный китайский чай.", desc: "Выдержанный китайский чай с глубоким древесным вкусом и землистыми нотами." },
-            { name: "Да Хун Пао", price: 600, composition: "Утёсный улун.", desc: "Легендарный утёсный улун с насыщенным вкусом и дымно-шоколадными оттенками." },
-            { name: "Тигуаньинь", price: 600, composition: "Улун.", desc: "Утончённый улун с цветочным ароматом и мягким сладковатым вкусом." }
+            { name: "Молочный улун", price: 600, img: "images/tea/milk-oolong.jpg", composition: "Китайский улун.", desc: "Мягкий китайский улун со сливочным вкусом и цветочным ароматом." },
+            { name: "Улун с персиком", price: 600, img: "images/tea/oolong-peach.jpg", composition: "Улун с персиком.", desc: "Нежный улун с сочным персиком и фруктовым послевкусием." },
+            { name: "Улун с фейхоа", price: 600, img: "images/tea/oolong-feijoa.jpg", composition: "Улун с фейхоа.", desc: "Свежий улун с экзотическими нотами фейхоа и лёгкой кислинкой." },
+            { name: "Пуэр", price: 600, img: "images/tea/puer.jpg", composition: "Выдержанный китайский чай.", desc: "Выдержанный китайский чай с глубоким древесным вкусом и землистыми нотами." },
+            { name: "Да Хун Пао", price: 600, img: "images/tea/da-hong-pao.jpg", composition: "Утёсный улун.", desc: "Легендарный утёсный улун с насыщенным вкусом и дымно-шоколадными оттенками." },
+            { name: "Тигуаньинь", price: 600, img: "images/tea/tieguanyin.jpg", composition: "Улун.", desc: "Утончённый улун с цветочным ароматом и мягким сладковатым вкусом." }
         ]
     },
     {
         title: "ФРУКТОВЫЕ ЧАИ",
-        img: "https://i.pinimg.com/736x/cb/1c/02/cb1c029cd28f1214e9341385ebe57b0f.jpg",
+        img: "images/tea/nagly-fruit.jpg",
         items: [
-            { name: "Наглый фрукт", price: 600, composition: "Фруктовый микс.", desc: "Яркий фруктовый микс с насыщенным ягодным ароматом и лёгкой кислинкой." },
-            { name: "Цитрусовый", price: 600, composition: "Апельсин, лимон.", desc: "Бодрящий чай с апельсином, лимоном и свежими цитрусовыми нотами." },
-            { name: "Тропический", price: 600, composition: "Ананас, тропические фрукты.", desc: "Сочный фруктовый чай с ананасом и сладкими тропическими акцентами." }
+            { name: "Наглый фрукт", price: 600, img: "images/tea/nagly-fruit.jpg", composition: "Фруктовый микс.", desc: "Яркий фруктовый микс с насыщенным ягодным ароматом и лёгкой кислинкой." },
+            { name: "Цитрусовый", price: 600, img: "images/tea/citrus.jpg", composition: "Апельсин, лимон.", desc: "Бодрящий чай с апельсином, лимоном и свежими цитрусовыми нотами." },
+            { name: "Тропический", price: 600, img: "images/tea/tropical.jpg", composition: "Ананас, тропические фрукты.", desc: "Сочный фруктовый чай с ананасом и сладкими тропическими акцентами." }
         ]
     },
     {
         title: "АВТОРСКИЕ ЧАИ",
-        img: "https://i.pinimg.com/736x/60/b0/81/60b0819c7fc9ad2c9bff40e585fc5efb.jpg",
+        img: "images/tea/earl-grey-orange-ginger.jpg",
         items: [
-            { name: "Эрл Грей с апельсином и имбирем", price: 600, composition: "Бергамот, апельсин, имбирь.", desc: "Классический бергамот, дополненный цитрусом и лёгкой имбирной остротой." },
-            { name: "Глинтвейн", price: 600, composition: "Ягоды, цитрус, специи.", desc: "Пряный чай с ягодами, цитрусом и согревающими специями." },
-            { name: "Ягодное ассорти", price: 600, composition: "Смесь ягод.", desc: "Насыщенный ягодный чай с ярким сладко-кислым вкусом." }
+            { name: "Эрл Грей с апельсином и имбирем", price: 600, img: "images/tea/earl-grey-orange-ginger.jpg", composition: "Бергамот, апельсин, имбирь.", desc: "Классический бергамот, дополненный цитрусом и лёгкой имбирной остротой." },
+            { name: "Глинтвейн", price: 600, img: "images/tea/glintwein.jpg", composition: "Ягоды, цитрус, специи.", desc: "Пряный чай с ягодами, цитрусом и согревающими специями." },
+            { name: "Ягодное ассорти", price: 600, img: "images/tea/berry-assorti.jpg", composition: "Смесь ягод.", desc: "Насыщенный ягодный чай с ярким сладко-кислым вкусом." }
         ]
     }
 ];
