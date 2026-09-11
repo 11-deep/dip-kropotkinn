@@ -88,7 +88,7 @@ function renderMenu(q='',cat='ALL'){
         >
 
           <img
-            src="${c.img}"
+            src="${item.img || c.img}"
             alt="${escapeHtml(item.name)}"
             loading="lazy"
           >
